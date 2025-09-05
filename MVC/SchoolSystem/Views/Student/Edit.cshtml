@@ -1,0 +1,13 @@
+﻿@model Student
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+<form action="/student/update" method="post">
+    Id<input type="text" name="Id" value="@Model.Id" /><br />
+    Name<input type="text" name="Name" value="@Model.Name" /><br />
+    <input type="submit" value="EDIT" class="btn btn-success">
+</form>
+

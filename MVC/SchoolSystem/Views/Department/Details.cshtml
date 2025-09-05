@@ -1,0 +1,10 @@
+﻿@model Department
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+<h2 class="alert alert-info">
+    @Model.DeptId : @Model.DeptName : @Model.Capacity
+</h2>

@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewData["Title"] = "Add";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Add</h1>
+<form action="/department/create" method="post">
+    DeptId<input type="text" name="DeptId" /><br />
+    DeptName<input type="text" name="DeptName" /><br />
+    Capacity<input type="text" name="Capacity" /><br />
+    <input type="submit" value="ADD" class="btn btn-success">
+</form>

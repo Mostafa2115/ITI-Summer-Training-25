@@ -1,0 +1,32 @@
+﻿@model List<Student>
+@{
+	ViewData["Title"] = "Index";
+    Layout = "_Layout";
+}
+<a href="/student/add" class="btn btn-danger">Add new student</a>
+<h2>Student List</h2>
+	<table border="1" class="table-bordered table table-hover">
+		<thead>
+		<tr>
+			<th>Id</th>
+			<th>Name</th>
+		</tr>
+		</thead>
+		<tbody>
+		@foreach (var student in Model)
+		{
+			<tr>
+				<td>@student.Id</td>
+				<td>@student.Name</td>
+				<td>
+					<a href="/student/details/@student.Id" class="btn btn-info">Details</a>
+				</td>
+				<td>
+					<a href="/student/edit/@student.Id" class="btn btn-outline-info">Edit</a>
+				</td>
+			</tr>
+
+		}
+		</tbody>
+    </table>
+

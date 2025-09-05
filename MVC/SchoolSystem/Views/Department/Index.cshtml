@@ -1,0 +1,33 @@
+﻿@model List<Department>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<a href="/department/add" class="btn btn-danger">Add new department</a>
+<h2>Department List</h2>
+<table border="1" class="table-bordered table table-hover">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Name</th>
+			<th>Capacity</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var department in Model)
+		{
+			<tr>
+				<td>@department.DeptId</td>
+				<td>@department.DeptName</td>
+				<td>@department.Capacity</td>
+				<td>
+					<a href="/department/details/@department.DeptId" class="btn btn-info">Details</a>
+				</td>
+				<td>
+					<a href="/department/edit/@department.DeptId" class="btn btn-outline-info">Edit</a>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
+
